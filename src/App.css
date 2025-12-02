@@ -1,38 +1,241 @@
-.App {
-  text-align: center;
+/* ---------------------------------------------------
+   GLOBAL STYLING — PREMIUM GLASSMORPHISM PORTFOLIO
+-----------------------------------------------------*/
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0f172a, #111827, #1e293b);
+  background-size: 400% 400%;
+  animation: gradientShift 12s infinite ease-in-out;
+  font-family: 'Poppins', sans-serif;
+  color: #e2e8f0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Smooth gradient animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ---------------------------------------------------
+   GLASS CARD
+-----------------------------------------------------*/
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px) saturate(180%);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  border-radius: 18px;
+  padding: 30px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1100px;
+  transition: 0.4s ease;
+  animation: fadeIn 1.2s ease;
+}
+
+.glass:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------------------------------
+   HEADER
+-----------------------------------------------------*/
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  background: linear-gradient(135deg, #22d3ee, #818cf8);
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 22px;
+  color: #0f172a;
+  box-shadow: 0 4px 12px rgba(34, 211, 238, 0.4);
+}
+
+.nav a {
+  color: #e2e8f0;
+  margin: 0 14px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 8px #38bdf8;
+}
+
+.resume-btn {
+  background: linear-gradient(135deg, #34d399, #10b981);
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: #0f172a;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(52, 211, 153, 0.45);
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  transform: scale(1.06);
+}
+
+/* ---------------------------------------------------
+   HERO SECTION
+-----------------------------------------------------*/
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.hero p {
+  color: #cbd5e1;
+  font-size: 18px;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border-radius: 22px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 44px;
+  font-weight: bold;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-.App-link {
-  color: #61dafb;
+/* ---------------------------------------------------
+   TITLES
+-----------------------------------------------------*/
+.section h2 {
+  font-size: 26px;
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  margin-bottom: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ---------------------------------------------------
+   SKILLS + TOOLS PILL STYLING
+-----------------------------------------------------*/
+.pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pill {
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50px;
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.16);
+  transition: 0.3s;
+}
+
+.pill:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-4px);
+}
+
+/* ---------------------------------------------------
+   PROJECTS
+-----------------------------------------------------*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  padding: 22px;
+  background: rgba(255,255,255,0.09);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.14);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* ---------------------------------------------------
+   BUTTONS
+-----------------------------------------------------*/
+.btn {
+  margin-top: 14px;
+  display: inline-block;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  color: #0f172a;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(34, 211, 238, 0.4);
+}
+
+/* ---------------------------------------------------
+   FOOTER
+-----------------------------------------------------*/
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+/* ---------------------------------------------------
+   RESPONSIVE DESIGN
+-----------------------------------------------------*/
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+/* FIX CONTACT LINKS */
+#contact a {
+  color: #38bdf8 !important;      /* Bright cyan */
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  color: #22d3ee !important; 
+  text-shadow: 0 0 8px #38bdf8;
 }
