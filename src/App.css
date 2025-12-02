@@ -228,14 +228,235 @@ body {
     text-align: center;
   }
 }
-/* FIX CONTACT LINKS */
-#contact a {
-  color: #38bdf8 !important;      /* Bright cyan */
-  font-weight: 700;
-  text-decoration: none;
+/* ---------------------- CONTACT SECTION ---------------------- */
+.contact-text {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #cbd5e1;
+  font-size: 17px;
+  text-align: center;
 }
 
-#contact a:hover {
-  color: #22d3ee !important; 
-  text-shadow: 0 0 8px #38bdf8;
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.contact-card {
+  width: 260px;
+  padding: 26px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  text-align: center;
+  transition: 0.35s;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.4);
+}
+
+.contact-icon {
+  font-size: 44px;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.email-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  color: #0f172a;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.email-button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.55);
+}
+/* Make Contact Section Box Bigger */
+#contact.glass {
+  padding: 70px 55px;     /* Increase overall height */
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+/* Increase spacing inside */
+.contact-wrapper {
+  gap: 34px;
+  margin-bottom: 42px;
+}
+
+/* Slightly bigger contact cards */
+.contact-card {
+  width: 300px;
+  padding: 34px;
+}
+
+/* Make title + text spacing premium */
+#contact h2 {
+  font-size: 32px;
+  margin-bottom: 22px;
+}
+/* ---------------------------------------------------
+   SKILLS — GLASSMORPHISM PREMIUM STYLE
+-----------------------------------------------------*/
+.skills-container {
+  width: 100%;
+  padding: 90px 20px;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+}
+
+.skills-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 45px;
+  color: #38bdf8;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 26px;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.skill-card {
+  padding: 32px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(14px);
+  transition: 0.35s;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.45);
+  background: rgba(255,255,255,0.14);
+}
+
+.skill-icon {
+  font-size: 52px;
+  margin-bottom: 14px;
+  display: inline-block;
+  filter: drop-shadow(0px 0px 8px rgba(56, 189, 248, 0.55));
+}
+
+.skill-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #e2e8f0;
+}
+
+.skill-card p {
+  font-size: 15px;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 650px) {
+  .skills-title {
+    font-size: 30px;
+  }
+  .skill-card {
+    padding: 25px;
+  }
+  .skill-icon {
+    font-size: 46px;
+  }
+}
+/* ---------------------------------------------------
+   TOOLS — GLASSMORPHISM PREMIUM STYLE
+-----------------------------------------------------*/
+.tools-container {
+  width: 100%;
+  padding: 90px 20px;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+}
+
+.tools-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 45px;
+  color: #38bdf8;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 26px;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.tool-card {
+  padding: 32px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(14px);
+  transition: 0.35s;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.45);
+  background: rgba(255,255,255,0.14);
+}
+
+.tool-icon {
+  font-size: 54px;
+  margin-bottom: 14px;
+  display: inline-block;
+  filter: drop-shadow(0px 0px 8px rgba(56, 189, 248, 0.55));
+}
+
+.tool-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #e2e8f0;
+}
+
+.tool-card p {
+  font-size: 15px;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 650px) {
+  .tools-title {
+    font-size: 30px;
+  }
+  .tool-card {
+    padding: 25px;
+  }
+  .tool-icon {
+    font-size: 46px;
+  }
 }

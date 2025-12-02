@@ -1,18 +1,34 @@
 import React from "react";
 
-export default function Skills() {
-  const skills = [
-    "HTML", "CSS", "JavaScript", "Java", "C", "Python", "SQL", "UI/UX"
-  ];
 
+const Skills = () => {
   return (
-    <section id="skills" className="section glass">
-      <h2>Skills</h2>
-      <div className="pill-container">
-        {skills.map((skill, i) => (
-          <span key={i} className="pill">{skill}</span>
-        ))}
+    <div className="skills-container">
+      <h2 className="skills-title">My Skills</h2>
+
+      <div className="skills-grid">
+
+        <div className="skill-card">
+          <span className="skill-icon">💻</span>
+          <h3>Frontend Development</h3>
+          <p>HTML, CSS, JavaScript, React JS</p>
+        </div>
+
+        <div className="skill-card">
+          <span className="skill-icon">🛠</span>
+          <h3>Backend Development</h3>
+          <p>Node JS, MongoDB</p>
+        </div>
+
+        <div className="skill-card">
+          <span className="skill-icon">🌐</span>
+          <h3>Programming</h3>
+          <p>Java, Python, C, MySQL</p>
+        </div>
+
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default Skills;
