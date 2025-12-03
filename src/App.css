@@ -227,87 +227,114 @@ body {
     flex-direction: column;
     text-align: center;
   }
-}
-/* ---------------------- CONTACT SECTION ---------------------- */
-.contact-text {
-  max-width: 700px;
-  margin: 0 auto 30px;
-  color: #cbd5e1;
-  font-size: 17px;
+}.section.glass {
+  padding: 70px 20px;
   text-align: center;
+}
+
+.contact-text {
+  font-size: 18px;
+  margin-bottom: 40px;
+  opacity: 0.8;
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 25px;
   flex-wrap: wrap;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .contact-card {
-  width: 260px;
-  padding: 26px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 25px;
+  width: 270px;
   text-align: center;
-  transition: 0.35s;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .contact-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 22px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
 .contact-icon {
-  font-size: 44px;
-  color: #38bdf8;
+  font-size: 38px;
   margin-bottom: 10px;
+  color: #4b9cff;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  background: rgba(233, 233, 233, 0.19);
+  backdrop-filter: blur(10px);
+  outline: none;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ffffff;
+}
+
+.contact-form textarea {
+  resize: none;
 }
 
 .email-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 12px 24px;
-  background: linear-gradient(135deg, #22d3ee, #3b82f6);
-  color: #0f172a;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 18px;
+  background: linear-gradient(135deg, #4b9cff, #0073ff);
+  color: rgb(0, 0, 0);
+  padding: 14px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s ease;
   text-decoration: none;
-  transition: 0.25s;
+  width: max-content;
+  margin: auto;
 }
 
 .email-button:hover {
-  transform: scale(1.07);
-  box-shadow: 0 0 20px rgba(34, 211, 238, 0.55);
-}
-/* Make Contact Section Box Bigger */
-#contact.glass {
-  padding: 70px 55px;     /* Increase overall height */
-  margin-top: 70px;
-  margin-bottom: 70px;
+  background: linear-gradient(135deg, #0073ff, #0051be);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
 }
 
-/* Increase spacing inside */
-.contact-wrapper {
-  gap: 34px;
-  margin-bottom: 42px;
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .contact-wrapper {
+    gap: 15px;
+  }
+
+  .contact-card {
+    width: 100%;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
 }
 
-/* Slightly bigger contact cards */
-.contact-card {
-  width: 300px;
-  padding: 34px;
-}
-
-/* Make title + text spacing premium */
-#contact h2 {
-  font-size: 32px;
-  margin-bottom: 22px;
-}
 /* ---------------------------------------------------
    SKILLS — GLASSMORPHISM PREMIUM STYLE
 -----------------------------------------------------*/
